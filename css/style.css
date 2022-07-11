@@ -1,264 +1,44 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+h1 {
+    font-size: 60px;
 }
 
-body {
-    font-family: 'Rubik', sans-serif;
-    background-color: rgb(237, 217, 243);
+footer {
+    background-color: #f0ceed;
 }
 
-a {
-    text-decoration: none;
-    font-family: 'Rubik', sans-serif;
-}
-
-ul {
-    list-style-type: none;
+main {
+    background: rgb(63, 199, 251);
+    background: radial-gradient(circle, rgba(63, 199, 251, 0.5802696078431373) 0%, rgba(235, 70, 252, 0.36738445378151263) 100%);
+    min-height: 500px;
 }
 
 
-
-.header {
-    background-color: rgb(187, 238, 241);
-    padding: 15px 15px;
-    position: sticky;
-    top: 0;
-    border: solid 1px black;
+.zoom {
+    transition: transform .2s;
 }
 
-.header__content {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    align-items: center;
+.zoom:hover {
+    transform: scale(1.1);
 }
 
-.content__navbar {
-    display: flex;
-    flex-flow: row wrap;
+.color {
+    filter: grayscale(100%);
 }
 
-.content__navbar li {
-    margin: 10px 15px 10px 15px;
+.color:hover {
+    filter: grayscale(0%);
 }
 
-.content__navbar a {
-    text-decoration: none;
-    color: black;
+.entrada {
+    animation: enterAnim 1s ease 0s 1 normal forwards;
 }
 
-.content__navbar a:hover {
-    text-decoration: none;
-    color: white;
-}
-
-.main {
-    text-align: center;
-    background-image: radial-gradient(lightblue, pink);
-    background-size: 100% 100%;
-    min-height: 300px;
-}
-
-.main__content {
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    margin: 0;
-    padding: 20px;
-    align-items: center;
-}
-
-.main__content h1 {
-    font-size: 40px;
-    padding: 10px;
-}
-
-
-.main__content h2 {
-    margin: 20px;
-}
-
-.main__content h3 {
-    margin: 10px;
-}
-
-.main__content p {
-    margin: 20px;
-}
-
-.main__content div {
-    padding: 10px;
-}
-
-.main__content iframe {
-    width: fit-content;
-}
-
-.formulario {
-    display: grid;
-    grid-template-columns: 1fr;
-}
-
-.formulario div {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.imgLogo {
-    width: 50px;
-    height: 50px;
-    animation-duration: 1s;
-    animation-name: vanish;
-    animation-iteration-count: infinite;
-}
-
-@keyframes vanish {
+@keyframes enterAnim {
     0% {
-        opacity: 0.5;
+        transform: scale(0);
     }
 
     100% {
-        opacity: 1;
-    }
-}
-
-.imgReloj {
-    width: 30px;
-    height: 30px;
-}
-
-.imgRedes {
-    width: 20px;
-    height: 20px;
-    filter: grayscale(1);
-}
-
-.imgRedes:hover {
-    filter: grayscale(0);
-}
-
-.imgMenuMob {
-    width: 30px;
-    height: 30px;
-}
-
-.footer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background-color: rgb(237, 217, 243);
-    padding: 10px 10px;
-    justify-items: center;
-    margin: 0;
-    align-items: center;
-}
-
-.footer__content {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    margin: 0;
-    align-items: center;
-}
-
-.footer__content a {
-    margin: 10px 15px 10px 15px;
-    text-decoration: none;
-    color: black;
-}
-
-.content__photos {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    margin: 0 0;
-    padding: 20px;
-}
-
-.card {
-    background-color: #fff;
-    padding: 10px;
-    width: 267px;
-    height: 168px;
-    border-radius: 10px;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-    margin: 5px;
-    transition: all 0.3s;
-}
-
-.card:hover {
-    width: 272px;
-    height: 173px;
-    margin: 0px;
-}
-
-.card__header {
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.card__header img {
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    margin: auto;
-}
-
-@media (min-width: 320px) {
-    .content__photos {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 768px) {
-    .content__photos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .imgMenuMob {
-        display: none;
-    }
-}
-
-@media (min-width: 1150px) {
-    .content__photos {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .main__content h1 {
-        font-size: 35px;
-    }
-
-    .content__navbar {
-        display: none;
-    }
-
-    .formulario div {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-
-}
-
-
-
-@media (max-width: 435px) {
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-
-    .footer__content {
-        display: grid;
-        grid-template-columns: 1fr;
+        transform: scale(1);
     }
 }

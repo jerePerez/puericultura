@@ -1,107 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puericultura - Inicio</title>
-    <link rel="shortcut icon" href="./assets/favicon.png" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puericultura</title>
+    <link rel="shortcut icon" href="./assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__content">
-            <img src="./assets/img/logo.png" alt="logo sitio" class="imgLogo" />
-            <nav>
-                <ul class="content__navbar">
-                    <li>
-                        <a href="./index.html">Inicio </a>
-                    </li>
-                    <li>
-                        <a href="./pages/significado.html">Qué es la Puericultura</a>
-                    </li>
-                    <li>
-                        <a href="./pages/quienes.html">Quiénes somos</a>
-                    </li>
-                    <li>
-                        <a href="./pages/ubicacion.html">Ubicación</a>
-                    </li>
-                    <li>
-                        <a href="./pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
-
-            </nav>
-            <img src="./assets/img/menuMob.png" alt="menu mobile" class="imgMenuMob">
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg" style="background-color: #b8f2f7;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/ubicacion.html">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <hr />
 
-    <main class="main">
-        <section class="main__content">
-            <h1>PUERICULTURA</h1>
+    <main>
+        <section>
+            <h1 class="text-center entrada">Puericultura</h1>
+            <p class="text-center mt-4">Los pies más pequeños dejan las huellas más grandes en nuestro corazón</p>
         </section>
 
-        <section class="main__content">
-            <h2>Los pies más pequeños dejan las huellas más grandes en nuestro corazón</h2>
+        <section class="container mt-5 entrada">
+            <div class="row text-center">
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-3 rounded zoom">
+                    <img src="./assets/img/parto.PNG" class="img-thumbnail" alt="parto">
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-3 rounded zoom">
+                    <img src="./assets/img/pies.PNG" class="img-thumbnail" alt="parto">
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-3 rounded zoom">
+                    <img src="./assets/img/risa.PNG" class="img-thumbnail" alt="parto">
+                </div>
+
+                <div class="col-sm-12 col-md-6 col-lg-3 mb-3 rounded zoom" width:>
+                    <img src="./assets/img/upa.PNG" class="img-thumbnail" alt="parto">
+                </div>
+            </div>
         </section>
 
-        <div class="content__photos">
-            <article class="card">
-                <div class="card__header">
-                    <img src="./assets/img/pies.PNG" alt="imagen Puericultura" />
-                </div>
-            </article>
-            <article class="card">
-                <div class="card__header">
-                    <img src="./assets/img/risa.PNG" alt="imagen Puericultura" />
-                </div>
-            </article>
-            <article class="card">
-                <div class="card__header">
-                    <img src="./assets/img/parto.PNG" alt="imagen Puericultura" />
-                </div>
-            </article>
-            <article class="card">
-                <div class="card__header">
-                    <img src="./assets/img/upa.PNG" alt="imagen Puericultura" />
-                </div>
-            </article>
-        </div>
-
-        <section class="main__content">
-            <h3>Nuestro Objetivo</h3>
-            <p>Acompañar a la familia en la construcción del vínculo con el bebé, para generarle seguridad y alegría en
-                su crecimiento.</p>
+        <section class="m-4">
+            <h4 class="text-center">Nuestro Objetivo</h4>
+            <p class="text-center mt-4">Acompañar a la familia en la construcción del vínculo con el bebé, para
+                generarle seguridad y alegría en su crecimiento.</p>
         </section>
+
     </main>
 
-    <hr />
+    <footer>
+        <div class="container mt-0">
+            <div class="row justify-content-evenly">
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="tel:+541123456789" class="text-decoration-none link-dark">Teléfono: +541123456789</a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="mailto:info@correo.com.ar" class="text-decoration-none link-dark">Correo:
+                        info@correo.com.ar</a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <p>Horarios de atención:</p>
+                    <p>Lunes a Viernes 10:00 a 19:00 hs</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="https://www.instagram.com" target="_blank" class="color">
+                        <img src="./assets/img/instagram.png" alt="instagram" width="30" height="30" />
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="color">
+                        <img src="./assets/img/youtube.png" alt="youtube" width="30" height="30" />
+                    </a>
+                </div>
+            </div>
 
-    <footer class="footer">
-        <div class="footer__content">
-            <img src="./assets/img/logo.png" alt="logo" class="imgLogo" />
-        </div>
-        <div class="footer__content">
-            <a href="tel:+541123456789">Teléfono: +541123456789</a>
-            <a href="mailto:info@correo.com.ar">Correo: info@correo.com.ar</a>
-        </div>
-        <div class="footer__content">
-            <img src="./assets/img/horario.png" alt="reloj" class="imgReloj" />
-            <p>Horarios de atención: Lunes a Viernes - 10:00 a 19:00 hs</p>
-        </div>
-        <div class="footer__content">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="./assets/img/instagram.png" alt="instagram" class="imgRedes" />
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="./assets/img/youtube.png" alt="youtube" class="imgRedes" />
-            </a>
         </div>
     </footer>
 
