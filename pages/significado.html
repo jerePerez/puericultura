@@ -1,87 +1,98 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Puericultura - Inicio</title>
-    <link rel="shortcut icon" href="../assets/favicon.png" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qué es</title>
+    <link rel="shortcut icon" href="../assets/favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <header class="header">
-        <div class="header__content">
-            <img src="../assets/img/logo.png" alt="logo sitio" class="imgLogo" />
-            <nav>
-                <ul class="content__navbar">
-                    <li>
-                        <a href="../index.html">Inicio </a>
-                    </li>
-                    <li>
-                        <a href="../pages/significado.html">Qué es la Puericultura</a>
-                    </li>
-                    <li>
-                        <a href="../pages/quienes.html">Quiénes somos</a>
-                    </li>
-                    <li>
-                        <a href="../pages/ubicacion.html">Ubicación</a>
-                    </li>
-                    <li>
-                        <a href="../pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
-
-            </nav>
-            <img src="../assets/img/menuMob.png" alt="menu mobile" class="imgMenuMob">
-        </div>
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg" style="background-color: #b8f2f7;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../assets/logo.png" alt="" width="40" height="40" class="d-inline-block align-text-top">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="../pages/significado.html">Qué es la Puericultura</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/quienes.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/ubicacion.html">Ubicación</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
-    <hr />
 
-    <main class="main">
-        <section class="main__content">
-            <h1>¿Qué es la Puericultura?</h1>
-            <p>
-                Se entiende la Puericultura como "crianza, cuidado y desarrollo de los niños" (del latín: puer, pueris,
-                “niño, y cultura, “cultivo, cuidado”).
-                La Puericultura es el cuidado y la formación de los individuos, a través del análisis de los distintos
-                factores de crecimiento, el desarrollo de su inteligencia y las actividades que realiza en forma
-                cotidiana, y de la búsqueda de un entorno de bienestar para el crecimiento y desarrollo desde su
-                nacimiento hasta la adolescencia.
-
-                La Asociación Civil Argentina de Puericultura (ACADP) lo define como una ciencia transdisciplinaria del
-                equipo de salud cuyo objetivo principal es asegurar el desarrollo físico, emocional y social de los
-                individuos, la promoción de la lactancia y el vínculo temprano; desde la etapa preconcepcional hasta la
-                adolescencia.
-            </p>
+    <main>
+        <section>
+            <h1 class="text-center entrada">¿Qué es la Puericultura?</h1>
         </section>
+
+        <section class="container mt-5 entrada">
+            <div class="row">
+                <p class="text-center">Se entiende la Puericultura como "crianza, cuidado y desarrollo de los niños"
+                    (del latín: puer, pueris, “niño, y cultura, “cultivo, cuidado”). La Puericultura es el cuidado y la
+                    formación de los individuos, a través del análisis de los distintos factores de crecimiento, el
+                    desarrollo de su inteligencia y las actividades que realiza en forma cotidiana, y de la búsqueda de
+                    un entorno de bienestar para el crecimiento y desarrollo desde su nacimiento hasta la adolescencia.
+                    La Asociación Civil Argentina de Puericultura (ACADP) lo define como una ciencia transdisciplinaria
+                    del equipo de salud cuyo objetivo principal es asegurar el desarrollo físico, emocional y social de
+                    los individuos, la promoción de la lactancia y el vínculo temprano; desde la etapa preconcepcional
+                    hasta la adolescencia.</p>
+
+            </div>
+        </section>
+
+
     </main>
 
-    <hr />
+    <footer>
+        <div class="container mt-0">
+            <div class="row justify-content-evenly">
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="tel:+541123456789" class="text-decoration-none link-dark">Teléfono: +541123456789</a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="mailto:info@correo.com.ar" class="text-decoration-none link-dark">Correo:
+                        info@correo.com.ar</a>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <p>Horarios de atención:</p>
+                    <p>Lunes a Viernes 10:00 a 19:00 hs</p>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3 text-center mt-4">
+                    <a href="https://www.instagram.com" target="_blank" class="color">
+                        <img src="../assets/img/instagram.png" alt="instagram" width="30" height="30" />
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="color">
+                        <img src="../assets/img/youtube.png" alt="youtube" width="30" height="30" />
+                    </a>
+                </div>
+            </div>
 
-    <footer class="footer">
-        <div class="footer__content">
-            <img src="../assets/img/logo.png" alt="logo" class="imgLogo" />
-        </div>
-        <div class="footer__content">
-            <a href="tel:+541123456789">Teléfono: +541123456789</a>
-            <a href="mailto:info@correo.com.ar">Correo: info@correo.com.ar</a>
-        </div>
-        <div class="footer__content">
-            <img src="../assets/img/horario.png" alt="reloj" class="imgReloj" />
-            <p>Horarios de atención: Lunes a Viernes - 10:00 a 19:00 hs</p>
-        </div>
-        <div class="footer__content">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="../assets/img/instagram.png" alt="instagram" class="imgRedes" />
-            </a>
-            <a href="https://www.youtube.com" target="_blank">
-                <img src="../assets/img/youtube.png" alt="youtube" class="imgRedes" />
-            </a>
         </div>
     </footer>
 
