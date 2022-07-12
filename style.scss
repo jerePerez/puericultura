@@ -1,3 +1,46 @@
+@import 'variables';
+
 h1 {
-    font-size: 60px;
+    font-size: $fontTitle;
+}
+
+footer {
+    background-color: $bgFooter;
+}
+
+main {
+    background: rgb(63, 199, 251);
+    background: radial-gradient(circle, rgba(63, 199, 251, 0.5802696078431373) 0%, rgba(235, 70, 252, 0.36738445378151263) 100%);
+    min-height: 500px;
+}
+
+.zoom {
+    transition: $transicion;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.color {
+    filter: grayscale(100%);
+    transition: $transicion;
+
+    &:hover {
+        filter: grayscale(0%);
+    }
+}
+
+.entrada {
+    animation: enterAnim 1s ease 0s 1 normal forwards;
+}
+
+@keyframes enterAnim {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
