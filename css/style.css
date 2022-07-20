@@ -1,5 +1,11 @@
+.titulos, h1, h4 {
+  color: black; }
+
 h1 {
   font-size: 60px; }
+
+h4 {
+  font-size: 30px; }
 
 footer {
   background-color: #f0ceed; }
@@ -22,6 +28,12 @@ main {
 
 .entrada {
   animation: enterAnim 1s ease 0s 1 normal forwards; }
+
+.btn-enviar {
+  background-color: #55acee; }
+
+.btn-limpiar {
+  background-color: #40e764; }
 
 @keyframes enterAnim {
   0% {
