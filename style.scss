@@ -1,5 +1,11 @@
 @import 'variables';
 
+body {
+    min-height: 100vh;
+    background-color: $bgFooter;
+}
+
+
 .titulos {
     color: $fontColor;
 }
