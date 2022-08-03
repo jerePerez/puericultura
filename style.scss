@@ -15,9 +15,13 @@ h1 {
     font-size: 60px;
 }
 
-h4 {
+h2 {
     @extend .titulos;
     font-size: 30px;
+}
+
+nav {
+    background-color: #b8f2f7;
 }
 
 footer {
