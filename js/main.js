@@ -84,7 +84,6 @@ function validarBusqueda(seleccion) {
 let busqueda = buscando();
 validarBusqueda(busqueda);
 
-const personita = ["Jere", "Dani"]
 const ul = document.getElementById('lista');
 
 for (const nombre of personas) {
