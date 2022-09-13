@@ -88,6 +88,6 @@ const ul = document.getElementById('lista');
 
 for (const nombre of personas) {
     let li = document.createElement('li');
-    li.innerText = nombre;
+    li.innerText = `Nombre: ${nombre.nombre} Apellido: ${nombre.apellido} Edad: ${nombre.edad}`;
     ul.append(li);
 }
