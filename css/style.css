@@ -25,6 +25,18 @@ main {
   background: radial-gradient(circle, rgba(63, 199, 251, 0.58027) 0%, rgba(235, 70, 252, 0.367384) 100%);
   min-height: 500px; }
 
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 20px;
+  z-index: 100; }
+
+.btn-wsp:hover {
+  filter: grayscale(50%); }
+
 .zoom {
   transition: 0.3s; }
   .zoom:hover {

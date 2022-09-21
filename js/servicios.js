@@ -1,6 +1,7 @@
 let productos = [];
 let carrito = [];
 
+// constructor de productos
 class Productos {
     constructor(id, description, price, img) {
         this.id = id;
@@ -13,19 +14,21 @@ class Productos {
     }
 }
 
+//agregar productos
 productos.push(new Productos(1, "Charla Informativa", 1500, "../assets/img/charla.jpg"));
 productos.push(new Productos(2, "Visita a Domicilio", 2500, "../assets/img/visita.jpg"));
 productos.push(new Productos(3, "Encuentro Virtual", 2000, "../assets/img/encuentro.jpg"));
 productos.push(new Productos(4, "Asistencia Prenatal", 3000, "../assets/img/asistencia.png"));
 
+//crear tarjetas
 function crearHtml(arr) {
     let container = document.querySelector('#container');
     container.innerHTML = ""
     for (const item of arr) {
         item.sumarIva()
         let div = document.createElement("div");
-        div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 text-center";
-        div.style = "width: 10rem;"
+        div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 row justify-content-evenly text-center";
+        div.style = "width: 14rem;"
         div.innerHTML = `<img class="card-img-top" src="${item.img}"/>
         <p class = "card-header text-center">${item.description}</p>
         <p class = "card-title text-center">$${item.price}</p>

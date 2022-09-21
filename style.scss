@@ -43,6 +43,20 @@ main {
     min-height: map-get($mainStyle, altura);
 }
 
+.btn-wsp {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    bottom: 30px;
+    right: 20px;
+    z-index: 100;
+}
+
+.btn-wsp:hover {
+    filter: grayscale(50%);
+}
+
 @mixin ampliar {
     transition: $transicion;
 
