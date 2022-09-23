@@ -99,4 +99,9 @@ function eliminarProducto(param) {
     total()
 }
 
-crearHtml(productos);
+let chequeo = document.getElementById("flexCheckDefault").addEventListener('click', event => {
+    if (event.target.checked) {
+        crearHtml(productos);
+    }
+});
+
