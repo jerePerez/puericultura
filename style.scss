@@ -57,6 +57,10 @@ main {
     filter: grayscale(50%);
 }
 
+.form-control {
+    width: 200px;
+}
+
 @mixin ampliar {
     transition: $transicion;
 

@@ -44,6 +44,11 @@ function botonComprar() {
             .querySelector(`#comprar-${item.id}`)
             .addEventListener("click", () => {
                 selecProducto(item);
+                Swal.fire(
+                    'Producto Seleccionado',
+                    'Añadido al carrito',
+                    'success'
+                )
             })
     }
 }
@@ -65,6 +70,7 @@ function crearHtmlCarrito(arr) {
         <td>$${item.price}</td>
         <td><button id="eliminar-${item.id}" class="btn-eliminar btn btn-danger">Eliminar</button></td>`;
         table.append(tr);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
     }
     botonEliminar()
 }
@@ -86,8 +92,14 @@ function botonEliminar() {
         el.addEventListener('click', (ev) => {
             let button = ev.target.id
             eliminarProducto(button)
+            Swal.fire({
+                icon: 'error',
+                title: 'Producto eliminado',
+                text: 'Se ha quitado del carrito',
+            })
         });
     })
+
 }
 
 function eliminarProducto(param) {
@@ -97,11 +109,17 @@ function eliminarProducto(param) {
     crearHtmlCarrito(carrito)
     contador()
     total()
+    localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
-let chequeo = document.getElementById("flexCheckDefault").addEventListener('click', event => {
-    if (event.target.checked) {
-        crearHtml(productos);
-    }
-});
 
+const seleccionados = JSON.parse(localStorage.getItem("carrito"))
+if (seleccionados) {
+    carrito = seleccionados;
+}
+
+function tomarEdad() {
+    let edad = document.getElementById("edad").value;
+    edad >= 18 ? crearHtml(productos) : alert("Usted es menor de edad");
+    crearHtmlCarrito(carrito);
+}
