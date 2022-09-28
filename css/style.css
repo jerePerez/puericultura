@@ -37,8 +37,8 @@ main {
 .btn-wsp:hover {
   filter: grayscale(50%); }
 
-.form-control {
-  width: 200px; }
+#edad {
+  width: 20rem; }
 
 .zoom {
   transition: 0.3s; }

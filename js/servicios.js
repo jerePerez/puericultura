@@ -26,13 +26,14 @@ function crearHtml(arr) {
     container.innerHTML = ""
     for (const item of arr) {
         item.sumarIva()
+        let { img, description, price, id } = item;
         let div = document.createElement("div");
         div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 row justify-content-evenly text-center";
         div.style = "width: 14rem;"
-        div.innerHTML = `<img class="card-img-top" src="${item.img}"/>
-        <p class = "card-header text-center">${item.description}</p>
-        <p class = "card-title text-center">$${item.price}</p>
-        <button id="comprar-${item.id}" class="btn btn-primary">Seleccionar</button> `;
+        div.innerHTML = `<img class="card-img-top" src="${img}"/>
+        <p class = "card-header text-center">${description}</p>
+        <p class = "card-title text-center">$${price}</p>
+        <button id="comprar-${id}" class="btn btn-primary">Seleccionar</button> `;
         container.append(div);
     }
     botonComprar()
@@ -64,11 +65,12 @@ function crearHtmlCarrito(arr) {
     let table = document.querySelector('#table');
     table.innerHTML = ""
     for (const item of arr) {
+        let { id, description, price } = item
         let tr = document.createElement("tr");
-        tr.innerHTML = `<td>${item.id}</td>
-        <td>${item.description}</td>
-        <td>$${item.price}</td>
-        <td><button id="eliminar-${item.id}" class="btn-eliminar btn btn-danger">Eliminar</button></td>`;
+        tr.innerHTML = `<td>${id}</td>
+        <td>${description}</td>
+        <td>$${price}</td>
+        <td><button id="eliminar-${id}" class="btn-eliminar btn btn-danger">Eliminar</button></td>`;
         table.append(tr);
         localStorage.setItem('carrito', JSON.stringify(carrito));
     }
