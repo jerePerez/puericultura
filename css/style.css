@@ -1,39 +1,29 @@
 body {
   min-height: 100vh;
-  background-color: #f0ceed;
-}
+  background-color: #f0ceed; }
 
-.titulos,
-h1,
-h2 {
-  color: black;
-}
+.titulos, h1, h2 {
+  color: black; }
 
 h1 {
-  font-size: 60px;
-}
+  font-size: 60px; }
 
 h2 {
-  font-size: 30px;
-}
+  font-size: 30px; }
 
 #lista {
-  list-style: none;
-}
+  list-style: none; }
 
 nav {
-  background-color: #b8f2f7;
-}
+  background-color: #b8f2f7; }
 
 footer {
-  background-color: #f0ceed;
-}
+  background-color: #f0ceed; }
 
 main {
   background: #3fc7fb;
   background: radial-gradient(circle, rgba(63, 199, 251, 0.58027) 0%, rgba(235, 70, 252, 0.367384) 100%);
-  min-height: 500px;
-}
+  min-height: 500px; }
 
 .btn-wsp {
   position: fixed;
@@ -42,52 +32,36 @@ main {
   line-height: 55px;
   bottom: 30px;
   right: 20px;
-  z-index: 100;
-}
+  z-index: 100; }
 
 .btn-wsp:hover {
-  filter: grayscale(50%);
-}
+  filter: grayscale(50%); }
 
-#edad {
-  width: 200px;
-}
+.form-control {
+  width: 200px; }
 
 .zoom {
-  transition: 0.3s;
-}
-
-.zoom:hover {
-  transform: scale(1.1);
-}
+  transition: 0.3s; }
+  .zoom:hover {
+    transform: scale(1.1); }
 
 .color {
   filter: grayscale(100%);
-  transition: 0.3s;
-}
-
-.color:hover {
-  filter: grayscale(0%);
-}
+  transition: 0.3s; }
+  .color:hover {
+    filter: grayscale(0%); }
 
 .entrada {
-  animation: enterAnim 1s ease 0s 1 normal forwards;
-}
+  animation: enterAnim 1s ease 0s 1 normal forwards; }
 
 .btn-enviar {
-  background-color: #55acee;
-}
+  background-color: #55acee; }
 
 .btn-limpiar {
-  background-color: #40e764;
-}
+  background-color: #40e764; }
 
 @keyframes enterAnim {
   0% {
-    transform: scale(0);
-  }
-
+    transform: scale(0); }
   100% {
-    transform: scale(1);
-  }
-}
+    transform: scale(1); } }

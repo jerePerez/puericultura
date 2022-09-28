@@ -1,5 +1,5 @@
 let productos = [];
-let carrito = [];
+const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 // constructor de productos
 class Productos {
@@ -113,13 +113,19 @@ function eliminarProducto(param) {
 }
 
 
-const seleccionados = JSON.parse(localStorage.getItem("carrito"))
-if (seleccionados) {
-    carrito = seleccionados;
-}
 
 function tomarEdad() {
     let edad = document.getElementById("edad").value;
-    edad >= 18 ? crearHtml(productos) : alert("Usted es menor de edad");
+    edad >= 18 ? crearHtml(productos) : Swal.fire({
+        icon: 'error',
+        title: 'Menor de edad',
+        text: 'No es posible mostrar los Servicios.',
+    });
     crearHtmlCarrito(carrito);
 }
+
+let edadBtn = document.getElementById("btnEnviar");
+
+document.getElementById("btnEnviar").addEventListener('click', function (e) {
+    edadBtn.disabled = true;
+});
