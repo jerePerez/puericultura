@@ -62,6 +62,11 @@ main {
     width: 20rem;
 }
 
+#divEdad {
+    position: absolute;
+    width: 100%;
+}
+
 @mixin ampliar {
     transition: $transicion;
 

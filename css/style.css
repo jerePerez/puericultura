@@ -40,6 +40,10 @@ main {
 #edad {
   width: 20rem; }
 
+#divEdad {
+  position: absolute;
+  width: 100%; }
+
 .zoom {
   transition: 0.3s; }
   .zoom:hover {
