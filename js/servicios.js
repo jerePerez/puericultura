@@ -25,11 +25,11 @@ function crearHtml(arr) {
     let container = document.querySelector('#container');
     container.innerHTML = ""
     for (const item of arr) {
-        item.sumarIva()
+        // item.sumarIva()
         let { img, description, price, id } = item;
         let div = document.createElement("div");
         div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 row justify-content-evenly text-center";
-        div.style = "width: 14rem;"
+        div.style = "width: 13rem;"
         div.innerHTML = `<img class="card-img-top" src="${img}"/>
         <p class = "card-header text-center">${description}</p>
         <p class = "card-title text-center">$${price}</p>
@@ -37,6 +37,8 @@ function crearHtml(arr) {
         container.append(div);
     }
     botonComprar()
+    contador()
+    total()
 }
 
 function botonComprar() {
@@ -59,6 +61,9 @@ function selecProducto(obj) {
     crearHtmlCarrito(carrito)
     contador()
     total()
+    if (carrito.length > 0) {
+        finBtn.disabled = false;
+    }
 }
 
 function crearHtmlCarrito(arr) {
@@ -112,13 +117,24 @@ function eliminarProducto(param) {
     contador()
     total()
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    if (carrito.length == 0) {
+        finBtn.disabled = true;
+    }
 }
 
 
+function cargaDatos() {
+    fetch('../js/data.json')
+        .then(res => res.json())
+        .then(data => {
+            crearHtml(data);
+        })
+
+}
 
 function tomarEdad() {
     let edad = document.getElementById("edad").value;
-    edad >= 18 ? crearHtml(productos) : Swal.fire({
+    edad >= 18 ? cargaDatos() : Swal.fire({
         icon: 'error',
         title: 'Menor de edad',
         text: 'No es posible mostrar los Servicios.',
@@ -127,7 +143,25 @@ function tomarEdad() {
 }
 
 let edadBtn = document.getElementById("btnEnviar");
+let finBtn = document.getElementById("btnFin");
 
 document.getElementById("btnEnviar").addEventListener('click', function (e) {
     edadBtn.disabled = true;
+    if (carrito.length > 0) {
+        finBtn.disabled = false;
+    }
 });
+
+
+document.getElementById("btnFin").addEventListener('click', function (e) {
+    Swal.fire(
+        'Compra Finalizada',
+        'Gracias por confiar en nosotros',
+        'success'
+    )
+    carrito.splice(0, carrito.length)
+    crearHtmlCarrito(carrito)
+    localStorage.clear()
+    contador()
+    total()
+})
