@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "description": "Charla Informativa",
+        "price": 1500,
+        "img": "../assets/img/charla.jpg"
+    },
+    {
+        "id": 2,
+        "description": "Visita a Domicilio",
+        "price": 2500,
+        "img": "../assets/img/visita.jpg"
+    },
+    {
+        "id": 3,
+        "description": "Encuentro Virtual",
+        "price": 2000,
+        "img": "../assets/img/encuentro.jpg"
+    },
+    {
+        "id": 4,
+        "description": "Asistencia Prenatal",
+        "price": 3000,
+        "img": "../assets/img/asistencia.png"
+    }
+]
