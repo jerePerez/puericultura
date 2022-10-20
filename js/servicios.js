@@ -9,7 +9,7 @@ function crearHtml(arr) {
         // item.sumarIva()
         let { img, description, price, id } = item;
         let div = document.createElement("div");
-        div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 row justify-content-evenly text-center";
+        div.className = "card col-sm-12 col-md-6 col-lg-3 mb-3 row justify-content-evenly text-center entrada";
         div.style = "width: 11rem;"
         div.innerHTML = `<img class="card-img-top" src="${img}"/>
         <p class = "card-header text-center">${description}</p>
